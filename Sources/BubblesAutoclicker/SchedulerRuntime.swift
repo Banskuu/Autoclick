@@ -82,8 +82,10 @@ final class SchedulerRuntime {
 
     func pauseShift(by interval: TimeInterval) {
         for i in queue.indices { queue[i].due = queue[i].due.addingTimeInterval(interval) }
-        for key in routines.keys {
-            routines[key]?.nextCycleBase = routines[key]!.nextCycleBase.addingTimeInterval(interval)
+        for key in Array(routines.keys) {
+            guard var runtime = routines[key] else { continue }
+            runtime.nextCycleBase = runtime.nextCycleBase.addingTimeInterval(interval)
+            routines[key] = runtime
         }
     }
 
