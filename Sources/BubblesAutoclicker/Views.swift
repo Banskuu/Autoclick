@@ -37,7 +37,7 @@ struct MainView: View {
         .sheet(isPresented: $showRandomWindow) { RandomWindowView().environmentObject(app) }
         .sheet(isPresented: $showProfileManager) { ProfileManagerView().environmentObject(app) }
         .onAppear { app.refreshPermissions(prompt: false); app.refreshChromeWindows() }
-        .onChange(of: app.settingsHotkeyPulse) { _, _ in showSettings = true }
+        .onChange(of: app.settingsHotkeyPulse) { _ in showSettings = true }
     }
 
     private var header: some View {
@@ -101,7 +101,7 @@ struct MainView: View {
                     }.tag(routine.id)
                 }
             }
-            .onChange(of: app.selectedRoutineID) { _, _ in app.selectedAreaID = app.selectedRoutine?.areas.first?.id }
+            .onChange(of: app.selectedRoutineID) { _ in app.selectedAreaID = app.selectedRoutine?.areas.first?.id }
             HStack {
                 Button("+ Routine") { app.addRoutine(); routineDraft = app.selectedRoutine }
                 Button("Edit") { routineDraft = app.selectedRoutine }.disabled(app.selectedRoutine == nil)
@@ -236,7 +236,7 @@ struct SettingsView: View {
                 Picker("Chrome window", selection: $selectedChromeID) {
                     Text("Select…").tag("")
                     ForEach(app.chromeWindows) { Text($0.displayName).tag($0.id) }
-                }.onChange(of: selectedChromeID) { _, id in if let w = app.chromeWindows.first(where: { $0.id == id }) { app.selectChromeWindow(w) } }
+                }.onChange(of: selectedChromeID) { id in if let w = app.chromeWindows.first(where: { $0.id == id }) { app.selectChromeWindow(w) } }
                 Divider()
                 HStack {
                     Text("Monitor layout")
