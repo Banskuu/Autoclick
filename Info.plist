@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDevelopmentRegion</key><string>en</string>
+    <key>CFBundleExecutable</key><string>Bubbles Autoclicker</string>
+    <key>CFBundleIconFile</key><string>BubblesIcon</string>
+    <key>CFBundleIdentifier</key><string>com.bansku.bubblesautoclicker</string>
+    <key>CFBundleInfoDictionaryVersion</key><string>6.0</string>
+    <key>CFBundleName</key><string>Bubbles Autoclicker</string>
+    <key>CFBundleDisplayName</key><string>Bubbles Autoclicker</string>
+    <key>CFBundlePackageType</key><string>APPL</string>
+    <key>CFBundleShortVersionString</key><string>0.4.0</string>
+    <key>CFBundleVersion</key><string>4</string>
+    <key>LSMinimumSystemVersion</key><string>13.0</string>
+    <key>NSHighResolutionCapable</key><true/>
+    <key>NSInputMonitoringUsageDescription</key><string>Bubbles uses Input Monitoring so F9/F12 and protected click actions continue to work while other apps are active.</string>
+    <key>NSAppleEventsUsageDescription</key><string>Bubbles may interact with Chrome while running configured routines.</string>
+</dict>
+</plist>

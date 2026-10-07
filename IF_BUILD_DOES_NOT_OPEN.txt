@@ -1,0 +1,20 @@
+If double-clicking build_macos.command appears to do nothing:
+
+1. Open Terminal.
+2. Type:
+       bash 
+   (include the space after bash)
+3. Drag build_macos.command from Finder into Terminal.
+4. Press Return.
+
+This works even if Finder lost the executable permission.
+
+The 0.2 builder ALWAYS pauses on success/failure and writes:
+    build_macos.log
+
+If macOS shows a security warning, right-click build_macos.command -> Open.
+
+Requirements:
+- macOS 13 Ventura or newer
+- Xcode Command Line Tools
+- Swift 5.9 or newer

@@ -1,0 +1,8 @@
+.build/
+.swiftpm/
+dist/
+DerivedData/
+*.dmg
+*.xcarchive
+.DS_Store
+build_macos.log

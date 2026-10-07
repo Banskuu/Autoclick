@@ -1,0 +1,13 @@
+BUBBLES macOS 0.4 — APPLE SILICON
+
+BEST / EASIEST METHOD:
+Use GitHub Actions to build Bubbles on a real Apple Silicon Mac.
+
+Read:
+    APPLE_SILICON_START_HERE.md
+
+You do NOT need to use build_macos.command on your own Mac.
+
+The finished GitHub build provides:
+    Bubbles-Autoclicker-Apple-Silicon.dmg
+    Bubbles-Autoclicker-Apple-Silicon.zip
